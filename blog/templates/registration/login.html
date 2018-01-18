@@ -8,16 +8,13 @@
     <form method="post" action="{% url 'login' %}">
     {% csrf_token %}
         <div class="form-group">
-{#            <span>{{ form.username.label_tag }}</span>#}
-{#            <span>{{ form.username }}</span>#}
             <label for="id_username">Username:</label>
             <input type="text" class="form-control" name="username" required id="id_username" autofocus maxlength="254" placeholder="Enter username">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
         <div class="form-group">
             <label for="id_password">Password:</label>
             <input type="password" class="form-control" name="password" required id="id_password" placeholder="Password">
-{#            <span>{{ form.password.label_tag }}</span>#}
-{#            <span>{{ form.password }}</span>#}
         </div>
 
         <input type="submit" value="login" class="btn btn-primary" />
