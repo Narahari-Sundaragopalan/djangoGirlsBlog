@@ -8,6 +8,17 @@
             </div>
             <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
             <p>{{ post.text|truncatechars:200 }}</p>
+            <span style="background-color:yellow; font-weight: bold" >Watson Says:
+            </span>
+            <p>Anger: {{post.anger_score}}</p>
+                <p>Disgust: {{post.disgust_score}}</p>
+                
+                <p>Fear: {{post.fear_score}}</p>
+                <p>Joy: {{post.joy_score}}</p>
+                <p>Sad: {{post.sad_score}}</p>
+            <p>Translation Text: {{post.translations}}</p>
+            <p>Word Count: {{post.word_count}}</p>
+            <p>Character Count: {{post.character_count}}</p>
         </div>
     {% endfor %}
 {% endblock %}
